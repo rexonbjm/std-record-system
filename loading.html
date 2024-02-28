@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Website Loading Page</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap">
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    overflow: hidden;
+  }
+
+  .loading-text-container {
+    font-family: 'Sacramento', cursive;
+    font-size: 48px;
+    overflow: hidden;
+    white-space: nowrap; /* Ensure the text stays on a single line */
+    color: #333; /* Text color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Text shadow */
+    position: relative;
+  }
+
+  .loading-text {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: type1 1.5s steps(40, end);
+  }
+
+  @keyframes type1 {
+    0% {
+      width: 0;
+    }
+    50% {
+      width: 50%;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+
+  @keyframes type2 {
+    0% {
+      width: 0;
+    }
+    50% {
+      width: 50%;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+
+  /* New animation for text scaling and fading */
+  @keyframes scaleAndFade {
+    0%, 100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0;
+      transform: scale(1.2);
+    }
+  }
+
+  /* Apply the animation to the loading text */
+  .loading-text:hover {
+    animation: scaleAndFade 2s infinite;
+  }
+</style>
+</head>
+<body>
+  <div class="loading-text-container">
+    <h1 class="loading-text">Student Record System</h1>
+  </div>
+  <script>
+    // Redirect to index page after 3 seconds
+    setTimeout(function() {
+      window.location.href = "hoooooo.php";
+    }, 1600); // Adjust the delay as needed
+  </script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="loginpagestyle.css">
+    <link rel="stylesheet" href="rain.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h2 class="Logo">NSS</h2>
+        <nav class="Navigation">
+            <a href="#" id="loginLink">Login</a>
+            <a href="#" id="registerLink">Register</a>
+        </nav>
+    </header>
+
+
+    <!-- Rain Effect -->
+    <div class="maindiv">
+        <div class="rain"> </div>
+        <audio src="rainaud.mp3" autoplay></audio>
+    </div>
+
+
+    <!-- Login Form -->
+    <div class="wrapper" id="loginForm">
+        <div class="closeicon">
+            <i class='bx bx-x'></i>
+        </div>
+        <div class="formlogin">
+            <form action="validation.php" method = "post">
+                <h1>Login</h1>
+                <div class="input-box">
+                    <input type="text" placeholder="Username" name="username" required>
+                    <i class='bx bxs-user'></i>
+                </div>
+                <div class="input-box">
+                    <input type="password" placeholder="Password" name="password" required>
+                    <i class='bx bxs-lock'></i>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type = "checkbox">Remember Me</label>
+                    <a href="#">Forgot Password</a>
+                </div>
+                <button type="submit" class="btn" name="login">Login</button>
+                <div class="register-link">
+                    <p>Don't have an account? <a href="#" id="showRegister">Register</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <!-- Register Form -->
+    <div class="wrapper" id="registerForm">
+        <div class="closeicon">
+            <i class='bx bx-x'></i>
+        </div>
+        <div class="formregister">
+            <form action="registration.php" method = "post">
+                <h1>Registration</h1>
+                <div class="input-box">
+                    <input type="text" placeholder="Username" name="username" required>
+                    <i class='bx bxs-user'></i>
+                </div>
+                <div class="input-box">
+                    <input type="password" placeholder="Password" name="password" required>
+                    <i class='bx bxs-lock'></i>
+                </div>
+                <div class="terms-conditions">
+                    <label><input type = "checkbox" required> I agree to the terms and conditions.</label>
+                </div>
+                <button type="submit" class="btn" name="register">Register</button>
+
+                <div class="login-link">
+                    <p>Already have an account? <a href="#" id="showLogin">Login</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
